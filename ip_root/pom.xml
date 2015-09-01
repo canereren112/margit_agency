@@ -1,0 +1,223 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.margit.ispazarim</groupId>
+	<artifactId>ip_root</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.2.5.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<name>ip_root</name>
+	<description>ip_root</description>
+
+	<modules>
+		<module>ip_core</module>
+		<module>ip_service</module>
+		<module>ip_job</module>
+	</modules>
+
+	<properties>
+		<java.version>1.7</java.version>
+		<spring-boot.version>1.2.5.RELEASE</spring-boot.version>
+		<mysql.version>5.1.35</mysql.version>
+		<tomcat.version>7.0.59</tomcat.version>
+		<velocity.version>1.7</velocity.version>
+		<junit.version>4.12</junit.version>
+		<servlet-api.version>3.1.0</servlet-api.version>
+		<!-- <spring-cloud-connectors.version>1.1.0.RELEASE</spring-cloud-connectors.version> -->
+		
+		<ip_core.version>0.0.1-SNAPSHOT</ip_core.version>
+		<ip_job.version>0.0.1-SNAPSHOT</ip_job.version>
+		<ip_service.version>0.0.1-SNAPSHOT</ip_service.version>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<issueManagement>
+		<system>IsPazarim issue tracker</system>
+		<url>https://bitbucket.org/firateren/ip-dev-repo/issues</url>
+	</issueManagement>
+
+	<inceptionYear>2015</inceptionYear>
+
+	<mailingLists>
+		<!-- <mailingList> -->
+		<!-- <name>Resthub developer group</name> -->
+		<!-- <subscribe>resthub-dev@googlegroups.com</subscribe> -->
+		<!-- <unsubscribe>resthub-dev-unsubscribe@googlegroups.com</unsubscribe> -->
+		<!-- <post>resthub-dev@googlegroups.com</post> -->
+		<!-- <archive>http://groups.google.com/group/resthub-dev</archive> -->
+		<!-- </mailingList> -->
+	</mailingLists>
+
+	<developers>
+		<developer>
+			<id>firat.eren</id>
+			<name>Firat Eren</name>
+		</developer>
+		<developer>
+			<id>caner.eren</id>
+			<name>Caner Eren</name>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git@bitbucket.org/firateren/ip-dev-repo</connection>
+		<developerConnection>scm:git:git@bitbucket.org/firateren/ip-dev-repo</developerConnection>
+		<url>scm:git:git@bitbucket.org/firateren/ip-dev-repo</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-dependencies</artifactId>
+			<version>1.2.5.RELEASE</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.goldmansachs</groupId>
+			<artifactId>gs-collections</artifactId>
+			<version>6.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.cloud</groupId> -->
+		<!-- <artifactId>spring-cloud-starter-aws</artifactId> -->
+		<!-- <version>${spring-cloud-connectors.version}</version> -->
+		<!-- </dependency> -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-social-facebook</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-social-linkedin</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-social-twitter</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring-boot.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-aop</artifactId> -->
+		<!-- <version>1.2.4.RELEASE</version> -->
+		<!-- </dependency> -->
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-data-jpa</artifactId> -->
+		<!-- </dependency> -->
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-tomcat</artifactId> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-test</artifactId> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- <plugin> -->
+			<!-- <groupId>org.springframework.boot</groupId> -->
+			<!-- <artifactId>spring-boot-maven-plugin</artifactId> -->
+			<!-- </plugin> -->
+
+			<!-- <plugin> -->
+			<!-- <groupId>org.apache.tomcat.maven</groupId> -->
+			<!-- <artifactId>tomcat7-maven-plugin</artifactId> -->
+			<!-- <version>2.1</version> -->
+			<!-- <configuration> -->
+			<!-- <warSourceDirectory>src/main/webapp</warSourceDirectory> -->
+			<!-- </configuration> -->
+			<!-- </plugin> -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>JBoss repository</id>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+		</repository>
+
+		<repository>
+			<id>jboss</id>
+			<name>jboss repo</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+		</repository>
+
+		<repository>
+			<id>codelds</id>
+			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
+		</repository>
+
+		<repository>
+			<id>spring-releases</id>
+			<name>Spring Maven RELEASE Repository</name>
+			<url>http://maven.springframework.org/release</url>
+		</repository>
+
+		<repository>
+			<id>maven2-repository.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+</project>

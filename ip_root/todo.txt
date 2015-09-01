@@ -1,0 +1,41 @@
+- java ee 6 ve jdk 7 kur
+- querydsl kurulacak
+
+- caner in projesindeki mock yap�s�n� kullan�n. hamcrest ve mockito v.s
+- apache libleri se�
+- http://12factor.net/ oku
+- docker araştır
+
+* 2.versiyon
+- commandline i�in jcommander veya args4j kullan
+- metrics ile jvm analizi kullan
+- performans testi i�in jmh kullan
+- atomikos gerekli mi*
+- YUI Compressor kullan�n
+- akka y� iyi ara�t�r. kullan�labilir. �zellikle ip_job projesinde
+(spring-hibernate-springdata-springmvc-maven-project-framework buradaki mail �rne�ine bak)
+- jpa i�in cache kur: hazelcast olabilir
+- jmeter veya gatling ile stress load yap
+- checkstyle.xml(netflix ten alındı) dosyasını kullan
+- microservices araştır, gerekirse buna geçin
+- spring session a bak
+- nginx kullanılmalı mı?
+- database mongodb olabilir
+- spring cloud araştır
+
+
+�NCELENECEK PROJELER
+- spring-hibernate-springdata-springmvc-maven-project-framework (exception response yap�s�, login logout, authentication ve mail g�nderme)
+- resthub-spring-stack
+- springside4
+- liferay-portal
+- BroadleafCommerce
+- JDeSurvey
+- Hiring-Webapp
+- microservices-demo
+
+INCELENECEK
+-iplay-master
+- itracker
+- libreplan
+- 
